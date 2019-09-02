@@ -5,14 +5,10 @@ class CreateCustomers < ActiveRecord::Migration[5.1]
       t.integer :balance
       t.integer :age
       t.boolean :atm
-      t.string :mobile
-      t.string :boolean
-      t.string :net
-      t.string :boolean
-      t.string :sms
-      t.string :boolean
-      t.string :cdm
-      t.string :boolean
+      t.boolean :mobile
+      t.boolean :net
+      t.boolean :sms
+      t.boolean :cdm
       t.integer :mark
 
       t.timestamps

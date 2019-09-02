@@ -5,14 +5,10 @@ one:
   balance: 1
   age: 1
   atm: false
-  mobile: MyString
-  boolean: MyString
-  net: MyString
-  boolean: MyString
-  sms: MyString
-  boolean: MyString
-  cdm: MyString
-  boolean: MyString
+  mobile: false
+  net: false
+  sms: false
+  cdm: false
   mark: 1
 
 two:
@@ -20,12 +16,8 @@ two:
   balance: 1
   age: 1
   atm: false
-  mobile: MyString
-  boolean: MyString
-  net: MyString
-  boolean: MyString
-  sms: MyString
-  boolean: MyString
-  cdm: MyString
-  boolean: MyString
+  mobile: false
+  net: false
+  sms: false
+  cdm: false
   mark: 1

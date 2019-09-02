@@ -10,18 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190902123111) do
+ActiveRecord::Schema.define(version: 20190902131056) do
 
   create_table "customers", force: :cascade do |t|
     t.string "name"
     t.integer "balance"
     t.integer "age"
     t.boolean "atm"
-    t.string "mobile"
-    t.string "boolean"
-    t.string "net"
-    t.string "sms"
-    t.string "cdm"
+    t.boolean "mobile"
+    t.boolean "net"
+    t.boolean "sms"
+    t.boolean "cdm"
     t.integer "mark"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

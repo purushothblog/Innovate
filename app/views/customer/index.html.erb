@@ -19,15 +19,36 @@
 		<tbody>
 	<tr>
 		<td bgcolor="#C7ADAD"><h3><%= customer.id %></h3></td>
-		<td bgcolor="#F3CDCD"><h3><%= customer.name || "Not Available" %></h3></td>
-		<td bgcolor="#F3CDCD"><h3><%= customer.balance || "Not Available" %></h3></td>
-		<td bgcolor="#F3CDCD"><h3><%= customer.age || "Not Available"%></h3></td>
-		<td bgcolor="#F3CDCD"><h3><%= customer.atm || "Not Available"%></h3></td>
-		<td bgcolor="#F3CDCD"><h3><%= customer.mobile || "Not Available"%></h3></td>
-		<td bgcolor="#F3CDCD"><h3><%= customer.net || "Not Available"%></h3></td>
-		<td bgcolor="#F3CDCD"><h3><%= customer.sms || "Not Available"%></h3></td>
-		<td bgcolor="#F3CDCD"><h3><%= customer.cdm || "Not Available"%></h3></td>
-		<td bgcolor="#F3CDCD"><h3><%= customer.mark || "Not Available"%></h3></td>
+		<td bgcolor="#F3CDCD"><h3><%= customer.name || "No" %></h3></td>
+		<td bgcolor="#F3CDCD"><h3><%= customer.balance || "No" %></h3></td>
+		<td bgcolor="#F3CDCD"><h3><%= customer.age || "No"%></h3></td>
+		<td bgcolor="#F3CDCD"><h3><%= customer.atm || "No"%></h3></td>
+		<td bgcolor="#F3CDCD"><h3><%= customer.mobile || "No"%></h3></td>
+		<td bgcolor="#F3CDCD"><h3><%= customer.net || "No"%></h3></td>
+		<td bgcolor="#F3CDCD"><h3><%= customer.sms || "No"%></h3></td>
+		<td bgcolor="#F3CDCD"><h3><%= customer.cdm || "No"%></h3></td>
+		<td bgcolor="#F3CDCD"><h3>
+
+			<% if customer.atm.present?
+  			     @marks = 5
+  					
+  				if customer.mobile.present?
+  					 @marks =  @marks + 5
+  				else 
+  					@marks = @marks + 0
+  				end
+  			elsif
+  				 customer.mobile.present?
+  				 @marks = 5
+  				else
+  				@marks =  0
+  			
+  	end %>
+
+  		<% customer.mark = @marks %>
+
+
+		<%= @marks || "No"%></h3></td>
 
 	</tr>
 </tbody>
@@ -35,3 +56,6 @@
 <% end %>
 </table>
 </center>
+
+
+
