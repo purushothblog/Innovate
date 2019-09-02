@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  balance: 1
+  age: 1
+  atm: false
+  mobile: MyString
+  boolean: MyString
+  net: MyString
+  boolean: MyString
+  sms: MyString
+  boolean: MyString
+  cdm: MyString
+  boolean: MyString
+  mark: 1
+
+two:
+  name: MyString
+  balance: 1
+  age: 1
+  atm: false
+  mobile: MyString
+  boolean: MyString
+  net: MyString
+  boolean: MyString
+  sms: MyString
+  boolean: MyString
+  cdm: MyString
+  boolean: MyString
+  mark: 1
