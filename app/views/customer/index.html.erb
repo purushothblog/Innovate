@@ -11,7 +11,8 @@
 			<th bgcolor="violet"><%= link_to "NET Banking", :sort => "net" %></th>
 			<th bgcolor="violet"><%= link_to "SMS", :sort => "sms" %></th>
 			<th bgcolor="violet"><%= link_to "CDM", :sort => "cdm" %></th>
-			<th bgcolor="violet"><%= link_to "Marks", :sort => "mark" %></th>
+			<th bgcolor="violet"><%= link_to "Description", :sort => "mark" %></th>
+			
 
 		</thead>
 <% @customer.each do |customer| %>
@@ -27,28 +28,7 @@
 		<td bgcolor="#F3CDCD"><h3><%= customer.net || "No"%></h3></td>
 		<td bgcolor="#F3CDCD"><h3><%= customer.sms || "No"%></h3></td>
 		<td bgcolor="#F3CDCD"><h3><%= customer.cdm || "No"%></h3></td>
-		<td bgcolor="#F3CDCD"><h3>
-
-			<% if customer.atm.present?
-  			     @marks = 5
-  					
-  				if customer.mobile.present?
-  					 @marks =  @marks + 5
-  				else 
-  					@marks = @marks + 0
-  				end
-  			elsif
-  				 customer.mobile.present?
-  				 @marks = 5
-  				else
-  				@marks =  0
-  			
-  	end %>
-
-  		<% customer.mark = @marks %>
-
-
-		<%= @marks || "No"%></h3></td>
+		<td bgcolor="#F3CDCD"><h3><% customer.marker %><%= customer.mark || "No" %></h3></td>
 
 	</tr>
 </tbody>
@@ -56,6 +36,5 @@
 <% end %>
 </table>
 </center>
-
-
+		
 
