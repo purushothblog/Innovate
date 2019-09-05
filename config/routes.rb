@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get 'request/new'
 
   get 'customer/index'
-  root "customer#index"
+  root "customers#new"
 
   resources :customer
   resources :drivers
