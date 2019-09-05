@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190902131056) do
+ActiveRecord::Schema.define(version: 20190905190816) do
 
   create_table "customers", force: :cascade do |t|
     t.string "name"
@@ -22,6 +22,21 @@ ActiveRecord::Schema.define(version: 20190902131056) do
     t.boolean "sms"
     t.boolean "cdm"
     t.integer "mark"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "drivers", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "atm"
+  end
+
+  create_table "requests", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

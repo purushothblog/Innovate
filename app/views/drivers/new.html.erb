@@ -1,0 +1,26 @@
+<h1>Drivers#new</h1>
+<p>Find me in app/views/drivers/new.html.erb</p>
+
+
+<%= form_for @driver do |f| %>
+<div>
+	<%= f.label :first_name %>
+	<%= f.text_field :first_name %>
+</div>
+<div>
+	<%= f.label :last_name %>
+	<%= f.text_field :last_name %>
+</div>
+<div>
+	<%= f.label :Balance %>
+	<%= f.text_field :last_name %>
+</div>
+
+<div>
+	<%= f.label :ATM %>
+	<%= f.check_box :atm %>
+</div>
+
+
+<%= f.submit %>
+<% end %>

@@ -1,0 +1,11 @@
+
+<h1> Driver </h1>
+<% @drivers.each do |d| %>
+<%= d.first_name %><br>
+<%= d.last_name %><br>
+<%= d.atm.present? %><br>
+<%= d.mobile.present? %><br>
+<%= d.net.present? %><br>
+<%= d.sms.present? %><br>
+<%= d.cdm.present? %><br>
+<% end %>
