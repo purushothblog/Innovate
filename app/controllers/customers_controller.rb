@@ -16,6 +16,9 @@ class CustomersController < ApplicationController
     		render 'new'
     	end
   end
+  def show
+    @customers = Customer.all
+  end
 end
 
  private

@@ -11,7 +11,7 @@
 			<th bgcolor="violet"><%= link_to "NET Banking", :sort => "net" %></th>
 			<th bgcolor="violet"><%= link_to "SMS", :sort => "sms" %></th>
 			<th bgcolor="violet"><%= link_to "CDM", :sort => "cdm" %></th>
-		
+			<th bgcolor="violet"><%= link_to "MARK", :sort => "mark" %></th>
 			
 
 		</thead>
@@ -28,7 +28,7 @@
 		<td bgcolor="#F3CDCD"><h3><%= customer.net.present? %></h3></td>
 		<td bgcolor="#F3CDCD"><h3><%= customer.sms.present? %></h3></td>
 		<td bgcolor="#F3CDCD"><h3><%= customer.cdm.present? %></h3></td>
-		<td bgcolor="#F3CDCD"><h3><% customer.marker %></h3></td>
+		<td bgcolor="#F3CDCD"><h3><% customer.marker %><%= customer.mark %></h3></td>
 
 	</tr>
 </tbody>
@@ -37,3 +37,7 @@
 </table>
 </center>
 		
+<hr>
+<center><h2>Click the button to check the Top 5 Tech Savvy Customer</h2></center>
+<button class='button'><%= link_to "Top Customers", '/customers/show/' %></button>
+<button class='button'><%= link_to "ADD Customers", '/customers/new/' %></button>

@@ -2,49 +2,49 @@ class Customer < ApplicationRecord
  def marker
  	if self.atm.present?
  		self.mark = 5
- 		if self.mobile.present? || self.net.present? || self.sms.present? || self.cdm.present?
- 			self.mark = 10
+ 		if self.mobile.present? 
+ 			self.mark = self.mark + 5
  		else 
- 			self.mark = 5
+ 			self.mark 
  		end
- 			if self.net.present? || self.sms.present? || self.cdm.present?
- 				self.mark = 15
+ 			if self.net.present? 
+ 				self.mark = self.mark + 5
  			else 
- 				self.mark = 10
+ 				self.mark 
  			end
- 				if self.sms.present? || self.cdm.present?
- 					self.mark = 20
+ 				if self.sms.present? 
+ 					self.mark = self.mark + 5
  				else
- 					self.mark = 15
+ 					self.mark 
  				end
  					if self.cdm.present?
- 						self.mark = 25
+ 						self.mark = self.mark + 5
  					else
- 						self.mark = 20
+ 						self.mark 
  					end
  				
  		elsif 
  			self.mark = 0
  									
- 		if self.mobile.present? || self.net.present? || self.sms.present? || self.cdm.present?
- 				self.mark = 5
+ 		if self.mobile.present? 
+ 				self.mark = self.mark + 5
  		else 
- 			self.mark = 0
+ 			self.mark 
  		end
- 			if self.net.present? || self.sms.present? || self.cdm.present?
- 				self.mark = 10
+ 			if self.net.present?
+ 				self.mark = self.mark + 5
  			else 
- 				self.mark = 5
+ 				self.mark 
  			end
- 				if self.sms.present? || self.cdm.present?
- 					self.mark = 15
+ 				if self.sms.present? 
+ 					self.mark = self.mark + 5
  				else
- 					self.mark = 10
+ 					self.mark 
  				end
  					if self.cdm.present?
- 						self.mark = 20
+ 						self.mark = self.mark + 5
  					else
- 						self.mark = 15
+ 						self.mark 
  					end
  					end
  			

@@ -1,0 +1,24 @@
+<center><h1> Top 5 Performing Customer in Valanchery Branch</h1>
+	<h3> Ranking based on Digital Banking Usage </h3>
+<table>
+		<thead> 
+			<th bgcolor="violet"><%= link_to "Customer ID", :sort => "id" %></th>
+			<th bgcolor="violet"><%= link_to "NAME", :sort => "name" %></th>
+			<th bgcolor="violet"><%= link_to "Total Marks", :sort => "mark" %></th>
+		</thead>
+
+<% @customers.order("mark desc").limit(5).each do |customer| %>
+<tbody>
+	<tr>
+		<td bgcolor="#C7ADAD"><h3><%= customer.id %></h3></td>
+		<td bgcolor="#F3CDCD"><h3><%= customer.name || "No" %></h3></td>
+		<td bgcolor="#F3CDCD"><h3><%= customer.mark || "No" %></h3></td>
+	</tr>
+</tbody>
+
+<% end %>
+</table>
+</center>
+
+<button class='button'><%= link_to "Add Customer", '/customers/new/' %></button>
+<button class='button'><%= link_to "All Customer", '/customers/' %></button>
